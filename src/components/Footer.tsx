@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="flex items-center mb-4">
               <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-crusty-yellow shadow-lg">
                 <img 
-                  src="https://i.ibb.co/hJy6TQZS/85ea54e6-99c5-4980-88f6-da1be57b53b1.jpg" 
+                  src="/images/Logo/LOGO.jpg" 
                   alt="Logo O'Crusty" 
                   className="w-full h-full object-cover"
                 />

@@ -110,8 +110,8 @@ const Contact = () => {
           <div className="h-96 md:h-full rounded-lg overflow-hidden shadow-md">
             <div className="w-full h-full">
               <img 
-                src="https://images.pexels.com/photos/2253643/pexels-photo-2253643.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                alt="Emplacement du restaurant" 
+                src="/images/burger/B3.jpg" 
+                alt="Ambiance du restaurant O'Crusty Food" 
                 className="w-full h-full object-cover"
               />
             </div>
@@ -122,4 +122,4 @@ const Contact = () => {
   );
 };
 
-export default Contact
+export default Contact;
