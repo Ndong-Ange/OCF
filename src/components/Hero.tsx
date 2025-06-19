@@ -29,13 +29,13 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <a 
-              href="#menu"
+              href="menu"
               className="bg-crusty-red bg-opacity-90 hover:bg-opacity-100 text-white font-bold py-3 px-6 rounded-md transition-all duration-300 transform hover:scale-105 text-center text-lg"
             >
               Voir le Menu
             </a>
             <a 
-              href="#contact"
+              href="contact"
               className="bg-transparent hover:bg-white hover:bg-opacity-20 text-white text-opacity-90 font-bold py-3 px-6 rounded-md border-2 border-crusty-yellow border-opacity-90 transition-all duration-300 transform hover:scale-105 text-center text-lg"
             >
               Réserver une Table

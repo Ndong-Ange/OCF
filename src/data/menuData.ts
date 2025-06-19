@@ -26,7 +26,7 @@ export const menuItems: MenuItem[] = [
     name: 'Crusty Garlic Bread',
     description: 'Freshly baked bread with garlic butter and herbs',
     price: '$5.99',
-    image: 'https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'images/burger/B1.jpg',
     category: 'starters',
     popular: true
   },
@@ -35,7 +35,7 @@ export const menuItems: MenuItem[] = [
     name: 'Crispy Calamari',
     description: 'Tender calamari rings with our special seasoning',
     price: '$9.99',
-    image: 'https://images.pexels.com/photos/8969237/pexels-photo-8969237.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'images/burger/B2.jpg',
     category: 'starters'
   },
   {
