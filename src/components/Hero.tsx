@@ -11,7 +11,7 @@ const Hero = () => {
     <section 
       id="home"
       className="relative h-screen bg-cover bg-center flex items-center"
-      style={{ backgroundImage: "url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1920')" }}
+      style={{ backgroundImage: "url('https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1920')" }}
     >
       <div className="absolute inset-0 bg-crusty-black bg-opacity-50"></div>
       <div 
