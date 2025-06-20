@@ -12,7 +12,7 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose, itemName }) =>
 
   // Liens de commande réels pour Agde
   const orderLinks = {
-    uberEats: 'https://www.ubereats.com/fr/store/ocrusty-food/restaurant-id',
+    uberEats: 'https://www.ubereats.com/store/o-crusty-food/N92gwSFmUdyv18xC2vFO2A?diningMode=DELIVERY',
     phone1: 'tel:+33651676410',
     phone2: 'tel:+33772414991'
   };
