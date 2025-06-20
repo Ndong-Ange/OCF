@@ -1,19 +1,13 @@
 import React from 'react';
 import { MapPin, Phone, Clock, Mail } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
-import ReservationForm from './ReservationForm';
+import ReservationFormWithSupabase from './ReservationFormWithSupabase';
 
 const Contact = () => {
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true
   });
-
-  const handleReservationSubmit = (data: any) => {
-    console.log('Nouvelle réservation:', data);
-    // Ici vous pourriez envoyer les données à votre backend/Supabase
-    // Exemple: await supabase.from('reservations').insert([data]);
-  };
 
   return (
     <section id="contact" className="py-16 bg-crusty-black bg-opacity-5">
@@ -71,7 +65,7 @@ const Contact = () => {
               </div>
             </div>
             
-            <ReservationForm onSubmit={handleReservationSubmit} />
+            <ReservationFormWithSupabase />
           </div>
           
           <div className="h-96 md:h-full rounded-lg overflow-hidden shadow-md">
