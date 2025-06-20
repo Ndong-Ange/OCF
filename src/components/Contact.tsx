@@ -1,12 +1,19 @@
 import React from 'react';
 import { MapPin, Phone, Clock, Mail } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
+import ReservationForm from './ReservationForm';
 
 const Contact = () => {
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true
   });
+
+  const handleReservationSubmit = (data: any) => {
+    console.log('Nouvelle réservation:', data);
+    // Ici vous pourriez envoyer les données à votre backend/Supabase
+    // Exemple: await supabase.from('reservations').insert([data]);
+  };
 
   return (
     <section id="contact" className="py-16 bg-crusty-black bg-opacity-5">
@@ -64,47 +71,7 @@ const Contact = () => {
               </div>
             </div>
             
-            <div className="bg-crusty-red p-6 rounded-lg shadow-md text-white">
-              <h3 className="text-2xl font-bold mb-4 font-serif">Faire une Réservation</h3>
-              <p className="mb-4">Réservez votre table pour une expérience culinaire inoubliable</p>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <input 
-                    type="text" 
-                    placeholder="Nom" 
-                    className="px-4 py-2 rounded-md bg-white bg-opacity-20 placeholder-white placeholder-opacity-80 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-                  />
-                  <input 
-                    type="email" 
-                    placeholder="Email" 
-                    className="px-4 py-2 rounded-md bg-white bg-opacity-20 placeholder-white placeholder-opacity-80 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-                  />
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <input 
-                    type="text" 
-                    placeholder="Date" 
-                    className="px-4 py-2 rounded-md bg-white bg-opacity-20 placeholder-white placeholder-opacity-80 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-                  />
-                  <input 
-                    type="text" 
-                    placeholder="Heure" 
-                    className="px-4 py-2 rounded-md bg-white bg-opacity-20 placeholder-white placeholder-opacity-80 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-                  />
-                </div>
-                <input 
-                  type="text" 
-                  placeholder="Nombre de personnes" 
-                  className="w-full px-4 py-2 rounded-md bg-white bg-opacity-20 placeholder-white placeholder-opacity-80 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
-                />
-                <button 
-                  type="submit" 
-                  className="w-full bg-white text-crusty-red font-bold py-3 px-6 rounded-md hover:bg-crusty-yellow transition-colors duration-300"
-                >
-                  Réserver
-                </button>
-              </form>
-            </div>
+            <ReservationForm onSubmit={handleReservationSubmit} />
           </div>
           
           <div className="h-96 md:h-full rounded-lg overflow-hidden shadow-md">

@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { categories, menuItems, MenuItem } from '../data/menuData';
+import OrderModal from './OrderModal';
 
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState(categories[0].id);
+  const [orderModal, setOrderModal] = useState<{ isOpen: boolean; itemName?: string }>({
+    isOpen: false,
+    itemName: undefined
+  });
+  
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true
@@ -11,6 +17,14 @@ const Menu = () => {
   
   const filteredItems = menuItems.filter(item => item.category === activeCategory);
   const popularItems = menuItems.filter(item => item.popular);
+
+  const handleOrderClick = (itemName?: string) => {
+    setOrderModal({ isOpen: true, itemName });
+  };
+
+  const closeOrderModal = () => {
+    setOrderModal({ isOpen: false, itemName: undefined });
+  };
 
   return (
     <section id="menu" className="py-16 bg-crusty-black bg-opacity-5">
@@ -46,8 +60,11 @@ const Menu = () => {
                     <h4 className="text-xl font-bold text-crusty-black">{item.name}</h4>
                     <span className="text-lg font-semibold text-crusty-red">{item.price}</span>
                   </div>
-                  <p className="text-crusty-black opacity-80">{item.description}</p>
-                  <button className="mt-4 w-full bg-crusty-red text-white py-2 rounded-md hover:bg-red-700 transition-colors duration-300">
+                  <p className="text-crusty-black opacity-80 mb-4">{item.description}</p>
+                  <button 
+                    onClick={() => handleOrderClick(item.name)}
+                    className="w-full bg-crusty-red text-white py-2 rounded-md hover:bg-red-700 transition-colors duration-300"
+                  >
                     Commander
                   </button>
                 </div>
@@ -96,7 +113,10 @@ const Menu = () => {
                   <span className="font-semibold text-crusty-red">{item.price}</span>
                 </div>
                 <p className="text-sm text-crusty-black opacity-80 mb-4">{item.description}</p>
-                <button className="w-full bg-crusty-red text-white py-2 rounded-md hover:bg-red-700 transition-colors duration-300">
+                <button 
+                  onClick={() => handleOrderClick(item.name)}
+                  className="w-full bg-crusty-red text-white py-2 rounded-md hover:bg-red-700 transition-colors duration-300"
+                >
                   Commander
                 </button>
               </div>
@@ -104,8 +124,14 @@ const Menu = () => {
           ))}
         </div>
       </div>
+
+      <OrderModal 
+        isOpen={orderModal.isOpen}
+        onClose={closeOrderModal}
+        itemName={orderModal.itemName}
+      />
     </section>
   );
 };
 
-export default Menu
+export default Menu;
