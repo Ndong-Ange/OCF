@@ -29,7 +29,7 @@ const Hero = () => {
           </h1>
           <p className="text-xl text-white text-opacity-90 mb-6">
             Découvrez nos burgers gourmets avec viande fraîche du boucher, 
-            tacos authentiques et sandwichs croustillants. 
+            tacos authentiques et sandwichs croustillants.
           </p>
           <div className="bg-crusty-red bg-opacity-20 p-4 rounded-lg mb-8">
             <p className="text-crusty-yellow font-semibold">
@@ -52,9 +52,6 @@ const Hero = () => {
               🚚 Commander en Ligne
             </a>
           </div>
-          <p className="text-sm text-white text-opacity-70 mt-4 text-center">
-            Livraison disponible via Uber Eats • Service rapide et qualité garantie
-          </p>
         </div>
       </div>
       
