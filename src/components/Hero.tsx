@@ -20,7 +20,7 @@ const Hero = () => {
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="max-w-2xl backdrop-blur-sm bg-black bg-opacity-20 p-8 rounded-lg">
+        <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 font-serif leading-tight">
             Ô Crusty Food Agde
             <span className="block text-crusty-yellow text-3xl md:text-4xl mt-2">
@@ -31,11 +31,9 @@ const Hero = () => {
             Découvrez nos burgers gourmets avec viande fraîche du boucher, 
             tacos authentiques et sandwichs croustillants.
           </p>
-          <div className="bg-crusty-red bg-opacity-20 p-4 rounded-lg mb-8">
-            <p className="text-crusty-yellow font-semibold">
-              📍 1 Rue des Tamaris, Agde • 🕐 Ouvert 7j/7 de 18h à 22h • ⭐ Note 4.6/5 sur Uber Eats
-            </p>
-          </div>
+          <p className="text-crusty-yellow font-semibold mb-8">
+            📍 1 Rue des Tamaris, Agde • 🕐 Ouvert 7j/7 de 18h à 22h • ⭐ Note 4.6/5 sur Uber Eats
+          </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <a 
               href="/menu"
