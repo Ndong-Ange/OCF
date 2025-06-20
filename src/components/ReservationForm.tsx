@@ -57,23 +57,24 @@ const ReservationForm: React.FC = () => {
     setSubmitStatus('idle');
 
     try {
-      // Simuler un délai d'envoi
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Appel à l'API pour sauvegarder en base SQLite
+      const response = await fetch('/api/reservations', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          status: 'pending'
+        }),
+      });
 
-      // Stocker temporairement dans localStorage (disparaît au refresh)
-      const reservation = {
-        ...formData,
-        id: Date.now().toString(),
-        created_at: new Date().toISOString(),
-        status: 'pending'
-      };
+      if (!response.ok) {
+        throw new Error('Erreur lors de la sauvegarde');
+      }
 
-      // Récupérer les réservations existantes
-      const existingReservations = JSON.parse(localStorage.getItem('reservations') || '[]');
-      existingReservations.push(reservation);
-      localStorage.setItem('reservations', JSON.stringify(existingReservations));
-
-      console.log('Réservation enregistrée localement:', reservation);
+      const result = await response.json();
+      console.log('Réservation sauvegardée:', result);
       
       setSubmitStatus('success');
       
@@ -126,12 +127,12 @@ const ReservationForm: React.FC = () => {
           <Check className="w-8 h-8 text-green-600" />
         </div>
         <h3 className="text-2xl font-bold text-green-600 mb-2 font-serif">
-          Réservation Enregistrée !
+          Réservation Confirmée !
         </h3>
         <p className="text-crusty-black opacity-80 mb-4">
-          Votre réservation a été enregistrée temporairement. 
+          Votre réservation a été enregistrée dans notre base de données.
           <br />
-          <small className="text-gray-500">(Les données disparaîtront au refresh de la page)</small>
+          <small className="text-gray-500">Nous vous contacterons pour confirmer.</small>
         </p>
         <div className="bg-green-50 p-4 rounded-lg">
           <p className="text-sm text-green-700">
