@@ -20,12 +20,13 @@ const Hero = () => {
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="max-w-2xl backdrop-blur-sm bg-black bg-opacity-20 p-8 rounded-lg">
+        <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 font-serif leading-tight">
-            Savourez le Croustillant Parfait chez O'Crusty Food
+            Ô Crusty Food Agde
           </h1>
-          <p className="text-xl text-crusty-yellow text-opacity-90 mb-8">
-            Découvrez nos burgers signature, tacos savoureux et plats artisanaux préparés avec passion et les meilleurs ingrédients
+          <p className="text-xl text-white text-opacity-90 mb-8">
+            Découvrez nos burgers gourmets avec viande fraîche du boucher, 
+            tacos authentiques et sandwichs croustillants.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <a 
@@ -35,10 +36,12 @@ const Hero = () => {
               Voir le Menu
             </a>
             <a 
-              href="/contact"
-              className="bg-transparent hover:bg-white hover:bg-opacity-20 text-white text-opacity-90 font-bold py-3 px-6 rounded-md border-2 border-crusty-yellow border-opacity-90 transition-all duration-300 transform hover:scale-105 text-center text-lg"
+              href="https://www.ubereats.com/fr/store/ocrusty-food/restaurant-id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-black bg-opacity-70 hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-md transition-all duration-300 transform hover:scale-105 text-center text-lg"
             >
-              Réserver une Table
+              🚚 Commander en Ligne
             </a>
           </div>
         </div>
