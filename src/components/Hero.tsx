@@ -36,7 +36,7 @@ const Hero = () => {
               Voir le Menu
             </a>
             <a 
-              href="https://www.ubereats.com/fr/store/ocrusty-food/restaurant-id"
+              href="https://www.ubereats.com/store/o-crusty-food/N92gwSFmUdyv18xC2vFO2A?diningMode=DELIVERY"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-black bg-opacity-70 hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-md transition-all duration-300 transform hover:scale-105 text-center text-lg"
