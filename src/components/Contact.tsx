@@ -1,7 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, Clock, Mail } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
-import ReservationFormWithSupabase from './ReservationFormWithSupabase';
+import ReservationForm from './ReservationForm';
 
 const Contact = () => {
   const { ref, inView } = useInView({
@@ -65,7 +65,7 @@ const Contact = () => {
               </div>
             </div>
             
-            <ReservationFormWithSupabase />
+            <ReservationForm />
           </div>
           
           <div className="h-96 md:h-full rounded-lg overflow-hidden shadow-md">
