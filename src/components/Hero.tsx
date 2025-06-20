@@ -23,9 +23,6 @@ const Hero = () => {
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 font-serif leading-tight">
             Ô Crusty Food Agde
-            <span className="block text-crusty-yellow text-3xl md:text-4xl mt-2">
-              Cuisine Rapide & Fraîche
-            </span>
           </h1>
           <p className="text-xl text-white text-opacity-90 mb-8">
             Découvrez nos burgers gourmets avec viande fraîche du boucher, 
