@@ -27,12 +27,9 @@ const Hero = () => {
               Cuisine Rapide & Fraîche
             </span>
           </h1>
-          <p className="text-xl text-white text-opacity-90 mb-6">
+          <p className="text-xl text-white text-opacity-90 mb-8">
             Découvrez nos burgers gourmets avec viande fraîche du boucher, 
             tacos authentiques et sandwichs croustillants.
-          </p>
-          <p className="text-crusty-yellow font-semibold mb-8">
-            📍 1 Rue des Tamaris, Agde • 🕐 Ouvert 7j/7 de 18h à 22h • ⭐ Note 4.6/5 sur Uber Eats
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <a 
