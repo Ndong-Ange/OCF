@@ -17,16 +17,17 @@ const Footer = () => {
                 />
               </div>
               <span className="ml-3 text-2xl font-bold font-serif">
-                <span className="text-white">O'</span>
+                <span className="text-white">Ô</span>
                 <span className="text-crusty-red">Crusty</span>{' '}
                 <span className="text-crusty-yellow">Food</span>
               </span>
             </div>
             <p className="text-gray-400 mb-4">
-              Des délices croustillants dans chaque bouchée. Découvrez des saveurs authentiques préparées avec amour et tradition.
+              Restaurant de cuisine rapide et fraîche à Agde, spécialisé dans les burgers gourmets, 
+              tacos savoureux et sandwichs croustillants. Qualité et fraîcheur garanties !
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-crusty-red hover:text-crusty-yellow transition-colors duration-300">
+              <a href="https://www.facebook.com/crustyfood1" target="_blank" rel="noopener noreferrer" className="text-crusty-red hover:text-crusty-yellow transition-colors duration-300">
                 <Facebook className="w-6 h-6" />
               </a>
               <a href="#" className="text-crusty-red hover:text-crusty-yellow transition-colors duration-300">
@@ -63,44 +64,45 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4 text-crusty-red font-serif">Horaires d'Ouverture</h3>
             <ul className="space-y-2">
               <li className="flex justify-between">
-                <span className="text-gray-400">Lundi - Vendredi</span>
-                <span className="text-crusty-yellow">11h - 22h</span>
+                <span className="text-gray-400">Lundi - Dimanche</span>
+                <span className="text-crusty-yellow">18h - 22h</span>
               </li>
-              <li className="flex justify-between">
-                <span className="text-gray-400">Samedi</span>
-                <span className="text-crusty-yellow">10h - 23h</span>
+              <li className="text-sm text-gray-500 mt-2">
+                Ouvert 7j/7 même les jours fériés
               </li>
-              <li className="flex justify-between">
-                <span className="text-gray-400">Dimanche</span>
-                <span className="text-crusty-yellow">10h - 23h</span>
+              <li className="text-sm text-crusty-yellow mt-2">
+                🚚 Livraison disponible
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-xl font-bold mb-4 text-crusty-red font-serif">Newsletter</h3>
-            <p className="text-gray-400 mb-4">
-              Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités et offres spéciales.
-            </p>
-            <form className="flex">
-              <input 
-                type="email" 
-                placeholder="Votre email" 
-                className="px-4 py-2 rounded-l-md focus:outline-none bg-gray-800 text-white placeholder-gray-400 border border-gray-700"
-              />
-              <button 
-                type="submit" 
-                className="bg-crusty-red text-white px-4 py-2 rounded-r-md font-medium hover:bg-red-700 transition-colors duration-300"
+            <h3 className="text-xl font-bold mb-4 text-crusty-red font-serif">Contact & Livraison</h3>
+            <div className="space-y-2 text-gray-400">
+              <p>📍 1 Rue des Tamaris</p>
+              <p>34300 Agde, France</p>
+              <p>📞 +33 6 51 67 64 10</p>
+              <p>📞 +33 7 72 41 49 91</p>
+            </div>
+            <div className="mt-4 space-y-2">
+              <a 
+                href="https://www.ubereats.com/fr/store/ocrusty-food/restaurant-id" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block text-sm bg-black border border-crusty-red text-white px-3 py-1 rounded hover:bg-crusty-red transition-colors duration-300"
               >
-                S'inscrire
-              </button>
-            </form>
+                🚚 Commander sur Uber Eats
+              </a>
+            </div>
           </div>
         </div>
         
         <div className="border-t border-gray-800 pt-6 text-center">
           <p className="text-gray-400">
-            © {new Date().getFullYear()} O'Crusty Food. Tous droits réservés.
+            © {new Date().getFullYear()} Ô Crusty Food - Agde. Tous droits réservés.
+          </p>
+          <p className="text-sm text-gray-500 mt-1">
+            Cuisine rapide et fraîche • Burgers • Tacos • Sandwichs • Livraison 7j/7
           </p>
         </div>
       </div>

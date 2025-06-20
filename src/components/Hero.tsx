@@ -22,11 +22,20 @@ const Hero = () => {
       >
         <div className="max-w-2xl backdrop-blur-sm bg-black bg-opacity-20 p-8 rounded-lg">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 font-serif leading-tight">
-            Savourez le Croustillant Parfait chez O'Crusty Food
+            Ô Crusty Food Agde
+            <span className="block text-crusty-yellow text-3xl md:text-4xl mt-2">
+              Cuisine Rapide & Fraîche
+            </span>
           </h1>
-          <p className="text-xl text-crusty-yellow text-opacity-90 mb-8">
-            Découvrez nos burgers signature, tacos savoureux et plats artisanaux préparés avec passion et les meilleurs ingrédients
+          <p className="text-xl text-white text-opacity-90 mb-6">
+            Découvrez nos burgers gourmets avec viande fraîche du boucher, 
+            tacos authentiques et sandwichs croustillants. 
           </p>
+          <div className="bg-crusty-red bg-opacity-20 p-4 rounded-lg mb-8">
+            <p className="text-crusty-yellow font-semibold">
+              📍 1 Rue des Tamaris, Agde • 🕐 Ouvert 7j/7 de 18h à 22h • ⭐ Note 4.6/5 sur Uber Eats
+            </p>
+          </div>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <a 
               href="/menu"
@@ -35,12 +44,17 @@ const Hero = () => {
               Voir le Menu
             </a>
             <a 
-              href="/contact"
-              className="bg-transparent hover:bg-white hover:bg-opacity-20 text-white text-opacity-90 font-bold py-3 px-6 rounded-md border-2 border-crusty-yellow border-opacity-90 transition-all duration-300 transform hover:scale-105 text-center text-lg"
+              href="https://www.ubereats.com/fr/store/ocrusty-food/restaurant-id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-black bg-opacity-70 hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-md transition-all duration-300 transform hover:scale-105 text-center text-lg"
             >
-              Réserver une Table
+              🚚 Commander en Ligne
             </a>
           </div>
+          <p className="text-sm text-white text-opacity-70 mt-4 text-center">
+            Livraison disponible via Uber Eats • Service rapide et qualité garantie
+          </p>
         </div>
       </div>
       
